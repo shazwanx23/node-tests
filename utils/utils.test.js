@@ -6,15 +6,27 @@ it('should add two numbers', () =>{
 	var res = utils.add(33, 11);
 
 	expect(res).toBe(44).toBeA('number');
-	
-
 });
+
+it('should asyncAdd two numbers', (done) => {
+	utils.asyncAdd(4,3, (sum) => {
+		expect(sum).toBe(7).toBeA('number');
+		done();
+	})
+})
 
 it('should square a number', () => {
 	var res = utils.square(4);
 
 	expect(res).toBe(16).toBeA('number');
 });
+
+it('should async square a number', (done) => {
+	utils.asyncSquare(3, (squares) => {
+		expect(squares).toBe(9).toBeA('number');
+		done();
+	})
+})
 
 it('should verify first and last names are set', () => {
 	var user = {
