@@ -3,7 +3,7 @@ const expect = require('expect');
 
 var app = require('./server').app;
 
-describe('Server tests', () => {
+describe('Server', () => {
 
 		describe('GET /', () => {
 			it('should return hello world response', (done) => {
